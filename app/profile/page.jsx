@@ -34,13 +34,15 @@ const MyProfile = () => {
     if (hasConfirmed) {
       try {
         await fetch(`/api/prompt/${post._id.toString()}`, {
-          method: "DELETE"
-        })
+          method: "DELETE",
+        });
 
-        const filteredPosts = myPrompts.filter(prompt => prompt._id !== post._id)
-        setMyPrompts(filteredPosts)
+        const filteredPosts = myPrompts.filter(
+          (prompt) => prompt._id !== post._id
+        );
+        setMyPrompts(filteredPosts);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
   };
