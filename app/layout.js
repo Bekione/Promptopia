@@ -5,7 +5,9 @@ import "@styles/globals.css";
 export const metadata = {
   title: "Promptopia",
   description: "Discover & Share AI Prompts",
+  metadataBase: new URL('https://promptopia-bek.vercel.app'),
   generator: "Next.js",
+  category: 'technology',
   applicationName: "Promptopia",
   referrer: "origin-when-cross-origin",
   keywords: ["Prompt", "Share", "Ai"],
@@ -17,6 +19,14 @@ export const metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  
+  verification: {
+    google: 'google',
+    yahoo: 'yahoo',
+    other: {
+      me: ['my-email', 'my-link'],
+    },
   },
 };
 
